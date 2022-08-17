@@ -177,3 +177,5 @@ for i in range(num):
     print(sn)
     fn=sn
     sn=nn
+
+#if it work's Ill have you and I am NOT a complet idiot
