@@ -145,7 +145,7 @@ count=1
 while s!=10:
     if s==1:
          if max>r:
-             max=r
+             max=r+1
          r=randit (min,max)
          count+=1
          print("the number the computer thinks you choos is:", r)
@@ -155,7 +155,7 @@ while s!=10:
              break
     else:
         if min > r:
-            min = r
+            min = r-1
         r = randit(min, max)
         count += 1
         print("the number the computer thinks you choos is:", r)
@@ -177,5 +177,3 @@ for i in range(num):
     print(sn)
     fn=sn
     sn=nn
-
-#if it work's Ill have you and I am NOT a complet idiot
