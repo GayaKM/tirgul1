@@ -34,12 +34,6 @@ s=pi*r*r
 print(f"the space of the circul is: {s} and the perimeter is: {p}")
 print (f"\n")
 
-# just to mess around
-s=float(input("pleas enter the corrent amount of money in your bank account in nis: "))
-doller= 3.8
-print(f"you have {s*doller} doller in your account")
-print (f"\n")
-
 #2.1
 num=int(input("pleas enter a number of your chossing: "))
 if num%2==0:
@@ -71,29 +65,29 @@ print(f"tommorow you will have to chack {computer*2}, you'll get trought it, I b
 print (f"\n")
 
 #3.1
-num1=int(input("give me a number and give me a number now: "))
-num2=int(input("give me a number and give me a number now: "))
-s=0
-while s==0:
-    if num1>num2:
-    s=num1
-    e=num2
-    elif num1<num2:
-        s=num2
-        e=num1
-    else:
-        s=0
-        num1=int(input("give me a number and give me a number now: "))
-        num2=int(input("give me a number and give me a number now: "))
-if s%2==0:
-    while s<e:
-        print(s+2)
-        s+=2
-else:
-    while s<e:
-        print(s+3)
-        s+=2
-print (f"\n")
+# num1=int(input("give me a number and give me a number now: "))
+# num2=int(input("give me a number and give me a number now: "))
+# s=0
+# while s==0:
+#     if num1>num2:
+#         s=num1
+#         e=num2
+#     elif num1<num2:
+#         s=num2
+#         e=num1
+#     else:
+#         s=0
+#         num1=int(input("give me a number and give me a number now: "))
+#         num2=int(input("give me a number and give me a number now: "))
+# if s%2==0:
+#     while s<e:
+#         print(s+2)
+#         s+=2
+# else:
+#     while s<e:
+#         print(s+3)
+#         s+=2
+# print (f"\n")
 print("or")
 num1=int(input("give me a number and give me a number now: "))
 num2=int(input("give me a number and give me a number now: "))
@@ -118,7 +112,7 @@ for i in range (1,num+1):
         break
     print("wait for it...")
 else:
-    print(f"your number {} is firsti, like you mama")
+    print(f"your number {num} is firsti, like you mama")
 
 #3.3
 from random import randint
@@ -133,12 +127,12 @@ while num!=r:
 print(f"you have choosen cureectly the number that the computer choose is: {num} and you are an idiot who just waisted time from your life")
 
 #3.4
-num=int(input("pleas enter a number between 0-100 include- don't be a dick or i'll send you to an endless loop:")
+num=int(input("pleas enter a number between 0-100 include- don't be a dick or i'll send you to an endless loop:"))
 while num<0 or num>100:
     print("dickhead")
 max=100
 min=0
-r=randit (min,max)
+r=randint (min,max)
 print("the number the computer thinks you choos is:", r)
 s=int(input("if the number is higer then yours enter 1 if the number is lower then yours enter 2 and if the number is your number enter 10:"))
 count=1
@@ -146,7 +140,7 @@ while s!=10:
     if s==1:
          if max>r:
              max=r
-         r=randit (min,max)
+         r=randint (min,max)
          count+=1
          print("the number the computer thinks you choos is:", r)
          s=int(input("if the number is higer then yours enter 1 if the number is lower then yours enter 2 and if the number is your number enter 10:"))
@@ -155,8 +149,8 @@ while s!=10:
              break
     else:
         if min > r:
-            min = r
-        r = randit(min, max)
+            min = r+1
+        r = randint(min, max)
         count += 1
         print("the number the computer thinks you choos is:", r)
         s = int(input("if the number is higer then yours enter 1 if the number is lower then yours enter 2 and if the number is your number enter 10:"))
