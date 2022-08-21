@@ -134,7 +134,7 @@ print (f"\n")
 
 #3.4
 num=int(input("pleas enter a number: "))
-min=0
+min=num
 while num!=0:
     if num>0 and num<min:
         min=num
@@ -191,6 +191,9 @@ for i in range(5):
         if num%1==0 and i!=num  or num%1==0 and i!=1:
           continue
     else:
-        num<min
-        min=num
+        if min==0:
+            min=num
+        elif num<min:
+            min=num
+
 print(min)
