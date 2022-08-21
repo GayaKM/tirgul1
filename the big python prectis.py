@@ -76,8 +76,8 @@ num2=int(input("give me a number and give me a number now: "))
 s=0
 while s==0:
     if num1>num2:
-        s=num1
-        e=num2
+    s=num1
+    e=num2
     elif num1<num2:
         s=num2
         e=num1
@@ -118,8 +118,7 @@ for i in range (1,num+1):
         break
     print("wait for it...")
 else:
-    print(f"your number {num} is firsti, like you mama")
-print (f"\n")
+    print(f"your number {} is firsti, like you mama")
 
 #3.3
 from random import randint
@@ -132,23 +131,22 @@ while num!=r:
         print("the number youv'e choose is lower then the computers")
     num = int(input("let's see if you are the next Ori Galler, guess the number the computer choose: "))
 print(f"you have choosen cureectly the number that the computer choose is: {num} and you are an idiot who just waisted time from your life")
-print (f"\n")
 
 #3.4
-num=int(input("pleas enter a number between 0-100 include- don't be a dick or i'll send you to an endless loop:"))
+num=int(input("pleas enter a number between 0-100 include- don't be a dick or i'll send you to an endless loop:")
 while num<0 or num>100:
     print("dickhead")
 max=100
 min=0
-r=randint (min,max)
+r=randit (min,max)
 print("the number the computer thinks you choos is:", r)
 s=int(input("if the number is higer then yours enter 1 if the number is lower then yours enter 2 and if the number is your number enter 10:"))
 count=1
 while s!=10:
     if s==1:
          if max>r:
-             max=r+1
-         r=randint (min,max)
+             max=r
+         r=randit (min,max)
          count+=1
          print("the number the computer thinks you choos is:", r)
          s=int(input("if the number is higer then yours enter 1 if the number is lower then yours enter 2 and if the number is your number enter 10:"))
@@ -157,8 +155,8 @@ while s!=10:
              break
     else:
         if min > r:
-            min = r-1
-        r = randint(min, max)
+            min = r
+        r = randit(min, max)
         count += 1
         print("the number the computer thinks you choos is:", r)
         s = int(input("if the number is higer then yours enter 1 if the number is lower then yours enter 2 and if the number is your number enter 10:"))
@@ -166,7 +164,6 @@ while s!=10:
             print("yayyy")
             break
 print(f"the number you have choose is {r} and it took the computer only {count} tries")
-print (f"\n")
 
 #3.5
 num=int(input("enter the amount of figers you want you serios will have: "))
@@ -181,130 +178,4 @@ for i in range(num):
     fn=sn
     sn=nn
 
-#4.1
-num=int(input("enter a number you want to have in the sirios : "))
-s=[]
-while num!= str():
-    s.append(num)
-    num = input("enter a number you want to have in the sirios if you don't want more numbers enter a string:")
-print (f"the max number is:{max(s)} the min number is: {min(s)} the avarge {sum(s)/len(s)}")
-print (f"\n")
-
-#4.3
-from random import randint
-s=[]
-for i in range (10):
-    r=randint(1,100) #listr.append(randit(1,100))
-    listr+=[r]
-print(listr)
-print (f"\n")
-
-#4.4
-num=int(input("enter a number you want to have in the sirios : "))
-s=[]
-while num!= "":
-    s.append(num)
-    num = input("enter a number you want to have in the sirios if you don't want more numbers enter a string:")
-num1=int(input("enter a number you want to have in the sirios : "))
-d=[]
-while num1!= "":
-    d.append(num1)
-    num = input("enter a number you want to have in the sirios if you don't want more numbers enter a string:")
-s=s+d
-print(f"{s}\n and the length  of the serios len(s)")
-print (f"\n")
-
-#4.5
-num=int(input("enter a grade : if you don't have more enter <1 "))
-s=[]
-counth=0
-countl=0
-while 1<=num<=100:
-    num = int(input("enter a grade : if you don't have more enter <1 "))
-    s.append(num)
-for i in s:
-    if i>=60:
-        counth+=1
-    else:
-        countl+=1
-print (f"{countl} grades are failed and {counth} grades are pass")
-print (f"\n")
-
-#4.6
-s=[1,2,3,4,5,6,7,8,9,10]
-d=s[-3:]
-print(d)
-d=s[::-1]
-print(d)
-for i in range(len(s)):
-    if i%2==0:
-        print(s[i])
-d=[]
-for i in s:
-    if i%2!=0:
-        d.append(i)
-print (d)
-d=[]
-num1=int(input("enter a number : "))
-num2=int(input("enter a number : "))
-num3=int(input("enter a number : "))
-s=s[:4]+[num1,num2]+s[6:]+[num3]
-print(s)
-d=[]
-for i in s:
-    d.append(i*2)
-print(d)
-d=[]
-d=[s[0],s[-1]]
-print(d)
-print(f"\n")
-
-#4.2
-sti=input("enter a string:" )
-m=sti[::-1]
-print(m)
-print(f"\n")
-
-#5.1
-name=input("enter your first name, my love: ")
-lastname=input ("enter my future last name, hubby/wiffy: ")
-age=input("enter your age, suga mama/daddy: ")
-city=input("enter your city, not that I care: ")
-print(f"your name is {name}{lastname}\n your age is {age}\n the city you live on is {city}")
-print(f"\n")
-
-#5.2
-name=input("enter your first name, my love: ")
-age=input("enter your age, suga mama/daddy: ")
-city=input("enter your city, not that I care: ")
-print("your name is %s, your age %d, you live in %s"%(str(name),age,str(city)))
-print(f"\n")
-
-#5.3
-word=input("enter your street, home number, city:")
-for letter in word:
-    if letter==",":
-        word=f"{word[:letter]}+/n+{word[letter+1]}"
-print(word)
-print(f"\n")
-
-#5.4
-word=input("enter a word:")
-list1=word.split( )
-print(len(word))
-print(word[3:7])
-for letter in list1:
-    if letter=="":
-        break
-print(word[:letter]*3)
-print (word.capitalize())
-print(f"\n")
-
-#5.5
-word=input("enter a word:")
-letter=input("enter a letter: ")
-count=0
-for i in word:
-    if i==letter:
-        count+=1
-print(count)
+#if it work's Ill have you and I am NOT a complet idiot
