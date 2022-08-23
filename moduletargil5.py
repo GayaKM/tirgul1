@@ -84,7 +84,7 @@ print(password)
 print(f"\n")
 
 #11
-santence=input("pleas enter a santace: ")
+santence= input("pleas enter a santace: ")
 word=input("pleas enter a word: ")
 count=0
 listind=[]
@@ -111,10 +111,10 @@ print(santence)
 print(f"\n")
 
 #13
-santence=str(input("pleas enter a santace: "))
+santence= str(input("pleas enter a santence: "))
 letter=str(input("pleas enter a letter: "))
 for i in range(len(santence)):
     if santence[i]==letter:
-        santence[i]=i.upper()
+        santence=santence[:i]+santence[i].upper()+santence[i+1:]
 print(santence)
 print(f"\n")
