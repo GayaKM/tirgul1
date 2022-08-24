@@ -124,3 +124,65 @@ for i in range(5):#the MAIN program
         print("You have passed, goog luck in haven")
     else:
         print("You are a failer, your Mom is emberest by you")
+print(f"\n")
+
+#11
+def list_fourtytow (list1):#Method that makes alist with all the even numbers between 2-40 in an ampty list it gets
+   for i in range (2,41,2):
+       list1.append(i)
+   return list1
+
+newlist=[] #the MAIN program
+print(list_fourtytow(newlist))
+print(f"\n")
+
+#12
+from random import randint
+def random_twenty_values_list (list1): #Method that fills an empty list that was given with random 20 values 100-1
+    for i in range(20):
+        list1.append(randint(1,100))
+    return list1
+
+def how_many_times_number_in_list (list1,num): #Method that returns how many times thr given numbers showen in the given list
+    count=list1.count(num)
+    if count>0:
+        return count
+    return 0
+
+list1=[] #the MAIN program
+list1=random_twenty_values_list(list1)
+print(list1)
+number=int(input("Enter a number, but ain't yours: "))
+print(how_many_times_number_in_list(list1,number))
+print(f"\n")
+
+#13
+def index_of_the_max_value (string1:str): #Method that return the index of the max value in the given list, if there is more then 2 then it will return a masega
+    maxi=max(list1)
+    if how_many_times_number_in_list(list1,maxi)==1:
+        return string1.index(maxi)
+    else:
+        return "I know I'm not the only one"
+
+print(index_of_the_max_value(list1)) #the MAIN program
+print(f"\n")
+
+#14
+def grades_to_the_students (num): #Method that returns a list as long as the number it gets filld with grades from the user
+    list1=[]
+    for i in range (num):
+        list1.append(int(input("Enter a grade, be nice: ")))
+    return list1
+
+numstudents=int(input("pleas enter the number of students in the class: ")) #the MAIN program
+print(grades_to_the_students(numstudents))
+print(f"\n")
+
+#15
+def avarge_of_the_list (list1): #Method that get a list and returns the avarge of it
+    return sum(list1)/len(list1)
+
+print(avarge_of_the_list(grades_to_the_students(numstudents))) #the main program
+print(f"\n")
+
+
