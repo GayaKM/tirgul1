@@ -107,7 +107,7 @@ print (f"\n")
 #3.2
 num=int(input("Enter a number: "))
 for i in range (1,num+1):
-    if num%1==0 and i!=num and num>0 or num%1==0 and i!=1 and num>0:
+    if num%i==0 and i!=num and num>0 or num%i==0 and i!=1 and num>0:
         print("it's not firsti number")
         break
     print("wait for it...")
@@ -455,10 +455,53 @@ def oposit_string (sting:str): #Method
     return stingi
 
 #10.5
-def in_range (num,lrange,hrange):
+def in_range (num,lrange,hrange): #Method
     if lrange<=num<=hrange:
         return True
     return False
+
+#10.6
+def how_many_uppers_and_lowest (sting:str): #Method
+    countu=0
+    countl=0
+    for i in sting:
+        if i.isspace():
+            continue
+        if i.isupper():
+           countu+=1
+        else:
+            countl+=1
+    print(f"there is {countu} capital latters and {countl} normal ones")
+
+#10.7
+def only_one (sting): #Method
+    sting=set(sting)
+    sting=str(sting)
+    return sting
+
+#10.8
+def is_firsty (num): #Method
+    for i in range(1, num + 1):
+        if num%i==0 and i!=num and num>0 or num%i==0 and i!=1 and num>0:
+           return False
+    else:
+        return True
+
+#10.9
+def sum_even_list (listi:list):#Method
+    sumy=0
+    for i in listi:
+        if i%2==0:
+            sumy+=1
+    return sumy
+
+#10.10
+def is_plindrom (sting:str): #Method
+    stingi=oposit_string(sting)
+    if stingi==sting:
+        return True
+    return False
+
 
 
 
