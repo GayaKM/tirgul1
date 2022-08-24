@@ -70,8 +70,8 @@ num2=int(input("give me a number and give me a number now: "))
 s=0
 while s==0:
     if num1>num2:
-    s=num1
-    e=num2
+        s=num1
+        e=num2
     elif num1<num2:
         s=num2
         e=num1
@@ -112,7 +112,7 @@ for i in range (1,num+1):
         break
     print("wait for it...")
 else:
-    print(f"your number {} is firsti, like you mama")
+    print(f"your number {num} is firsti, like you mama")
 print (f"\n")
 
 #3.3
@@ -129,12 +129,12 @@ print(f"you have choosen cureectly the number that the computer choose is: {num}
 print (f"\n")
 
 #3.4
-num=int(input("pleas enter a number between 0-100 include- don't be a dick or i'll send you to an endless loop:")
+num=int(input("pleas enter a number between 0-100 include- don't be a dick or i'll send you to an endless loop:"))
 while num<0 or num>100:
     print("dickhead")
 max=100
 min=0
-r=randit (min,max)
+r=randint(min,max)
 print("the number the computer thinks you choos is:", r)
 s=int(input("if the number is higer then yours enter 1 if the number is lower then yours enter 2 and if the number is your number enter 10:"))
 count=1
@@ -142,7 +142,7 @@ while s!=10:
     if s==1:
          if max>r:
              max=r
-         r=randit (min,max)
+         r=randint(min,max)
          count+=1
          print("the number the computer thinks you choos is:", r)
          s=int(input("if the number is higer then yours enter 1 if the number is lower then yours enter 2 and if the number is your number enter 10:"))
@@ -152,7 +152,7 @@ while s!=10:
     else:
         if min > r:
             min = r
-        r = randit(min, max)
+        r = randint(min, max)
         count += 1
         print("the number the computer thinks you choos is:", r)
         s = int(input("if the number is higer then yours enter 1 if the number is lower then yours enter 2 and if the number is your number enter 10:"))
@@ -187,9 +187,9 @@ print (f"\n")
 
 #4.3
 from random import randint
-s=[]
+listr=[]
 for i in range (10):
-    r=randint(1,100) #listr.append(randit(1,100))
+    r=randint(1,100) #listr.append(randint(1,100))
     listr+=[r]
 print(listr)
 print (f"\n")
@@ -315,12 +315,11 @@ print(str(tupless))
 print (f"\n")
 
 #6.3
-tupless=("Gaya Koren Margi", 0527277304, 21, 3, [10, 13,19])
+tupless=("Gaya Koren Margi", "0527277304", 21, 3, [10, 13,19])
 print(tupless)
 print (f"\n")
 
 #6.4
-import randint from random
 list1=[]
 for i in range(10):
     list1+=randint(1,100)
@@ -404,8 +403,9 @@ for i in dicgrads:
     if dicgrads[i]>(sumy/len(dicgrads)):
         newlist.append(i)
 print (newlist)
+print (f"\n")
 
-#8.1?
+#8.1
 set1=set([1,2,3,4,5,6,7,8])
 set2=set([2,8,5,9,90,89,67])
 set3=set({})
@@ -418,6 +418,49 @@ set4=set3.copy()
 print(set4)
 set1.clear()
 set2.clear()
+print (f"\n")
+
+#10.1
+def the_biggest_num (num1,num2,num3): #Method
+    max=0
+    if num1>num2:
+        max=num1
+    else:
+        max=num2
+    if max<num3:
+        max=num3
+    return max
+
+#10.2
+def sum_of_a_list (listi): #Method
+    sumy=0
+    for i in listi:
+        sumy+=i
+    return sumy
+
+#10.3
+def duble_of_a_list (listi): #Method
+    duble=1
+    for i in listi:
+        duble*=i
+    return duble
+
+#10.4
+def oposit_string (sting:str): #Method
+    stingi=""
+    count=0
+    for i in range(len(sting)):
+        count-=1
+        stingi+=sting[count]
+    return stingi
+
+#10.5
+def in_range (num,lrange,hrange):
+    if lrange<=num<=hrange:
+        return True
+    return False
+
+
 
 
 
