@@ -24,7 +24,7 @@ print(listen)
 #7
 newlist=[]
 for i in listen:
-    if i%2!=0
+    if i%2!=0:
         newlist+=i
 print(newlist)
 
@@ -51,13 +51,13 @@ print(newlist)
 #11
 a=1
 b=1
-c=0
-buildlist=[a]
+buildlist=[]
 for i in range (number):
     if i==0:
-        print (a)
-    elif i<0:
-        print("it's an error like your existnec!")
+        buildlist[i]=a
     else:
-       c=a+b
-       a=b
+        buildlist[i]=a+b
+        a=b
+        b=a+b
+
+#12
