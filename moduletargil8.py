@@ -25,4 +25,35 @@ else:
 pactor = int(input("Enter the present of pactor to the test: "))
 this_student.upgrade(pactor)
 print(this_student)
+print(f"\n")
 
+#3
+from Targil8_Classes import Person
+pname = input("Enter the Person name: ")
+page = int(input("Enter the person age: "))
+num_of_kids = int(input("Enter the number of kids this person has: "))
+persy= Person(pname, page, num_of_kids)
+print(persy)
+if persy.haschildren():
+    print(f"The person has {persy.number_of_kids} kids")
+else:
+    print(f"The person is happy, they have no kids")
+print(f"The person is: {persy.agegroup()}")
+print(f"\n")
+
+#4
+from Targil8_Classes import Hard_Disk
+disk_size = int(input("Enter the size of the disk: "))
+on_key = Hard_Disk(disk_size)
+print(on_key)
+nfname = input("Enter a name of file:")
+nfsize = int(input("Enter the file size: "))
+if on_key.add_file(nfname, nfsize):
+    print(on_key.file_list)
+if on_key.del_file(nfname):
+    print(on_key)
+nfname = input("Enter a name of file:")
+nfsize = int(input("Enter the file size: "))
+if on_key.update_file(nfname, nfsize):
+    print(on_key)
+print(f"\n")

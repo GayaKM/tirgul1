@@ -100,8 +100,7 @@ print(f"\n")
 
 
 # 8
-def power_of_number_and_power(num1,
-                              num2):  # method that gives the power of one number it gets in the other number it gets
+def power_of_number_and_power(num1, num2):  # method that gives the power of one number it gets in the other number it gets
     power = num1
     for i in range(num2 - 1):
         power *= num1
