@@ -44,9 +44,10 @@ def list(multiclass):
         return None
 
 #6
-def remove(rashima: list, value):
+def remove( value):
     """function remove, removes the given value from the given list"""
     newlist=[]
+    global rashima
     if value in rashima:
         for i in rashima:
             if i != value:

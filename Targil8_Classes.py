@@ -108,7 +108,7 @@ class Hard_Disk:
                 print("the name already exists so it doesn't go in")
                 return False
             else:
-                self.file_list.update({file_name: file_size})
+                self.file_list.update({file_name: file_size}) #self.file_list[file_name] = file_size
                 return True
         else:
             print("There is not enough room un the Hard disk ")
@@ -122,11 +122,13 @@ class Hard_Disk:
         else:
             return False
 
-    def update_file(self, file_name: str, new_size:int):
+    def update_file(self, file_name: str, new_size: int):
         """This method gets new size and name of already existed file and update it. returns true if it did and false if it didn"t """
         if file_name in self.file_list:
-            self.file_list[file_name] = new_size
-            return True
+            current_file_size=self.file_list[file_name]
+            if self.free_space()+current_file_size > new_size:
+                self.file_list[file_name] = new_size
+                return True
         else:
             print("There is not such file")
             return False
