@@ -93,40 +93,37 @@ class Animal:
 
     def eat(self, food: int):
         """This method gets food in gr and changes the characteristics of the animal by a formula 50gr=hl-1, 100gr=el-1"""
-        for i in range(50, food, 50):
-            if i != 0 and i % 2 != 0 and self.energy_level > 0:
-                self.energy_level -= 1
-            elif self.energy_level <= 0:
-                self.energy_level = 0
-            self.hunger_level -= 1
-            if self.hunger_level <= 0:
-                self.hunger_level = 0
-                print("The animal is full although it didn't ate all it's food")
-                break
+        hl = food/50
+        self.hunger_level -= hl
+        if self.hunger_level < 0:
+            self.hunger_level=0
+            print("The animal is full although it didn't ate all it's food")
+        self.energy_level -= hl/2
+        if self.energy_level < 0:
+            self.energy_level = 0
 
     def play(self, game: int):
         """This method gets the time of games in minutes and changes the characteristics of the animal by a formula 10 min=hl+2, 10 min=el-2"""
-        for i in range(10, game, 10):
-            if self.hunger_level <= 8:
-                self.hunger_level += 2
-            else:
-                self.hunger_level = 10
-            if self.energy_level >= 2:
-                self.energy_level -= 2
-            elif self.energy_level == 0:
-                print("The game is over cuz the Animal is tired")
-                break
+        hl = game / 10
+        self.hunger_level += hl*2
+        if self.hunger_level > 10:
+            self.hunger_level = 10
+        self.energy_level -= hl*2
+        if self.energy_level < 0:
+            self.energy_level = 0
+            print("The game is over cuz the Animal is tired")
 
     def rest(self, resting: int):
         """This method gets the time of resting in minutes and changes the characteristics of the animal by a formula 30 min=hl+1, 20 min=el+1"""
-        for i in range(20, resting, 10):
-            if i % 20 == 0 and self.energy_level <= 9:
-                self.energy_level += 1
-            elif self.energy_level == 10:
-                print("The Animal done resting and it would like to play")
-                break
-            if i % 30 == 0 and self.hunger_level <= 9:
-                self.hunger_level +=1
-            elif self.hunger_level == 10:
-                print("The Animal is done resting and would like to eat")
-                break
+        hl = resting / 30
+        if self.hunger_level + hl < 10:
+            self.hunger_level += hl
+        else:
+            self.hunger_level = 10
+            print("The Animal is done resting and would like to eat")
+        hl = resting / 20
+        if self.energy_level + hl < 10:
+            self.energy_level += hl
+        else:
+            self.energy_level = 10
+            print("The Animal done resting and it would like to play")
