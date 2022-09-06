@@ -425,6 +425,34 @@ set1.clear()
 set2.clear()
 print(f"\n")
 
+#9.1
+import datetime
+name=input("Enter your name: ")
+age=int(input("Enter yor age: "))
+years=(100-age)*365+(100-age)/4
+coc= datetime.datetime.now()+datetime.datetime(day=years)
+print(f"{name} will be hundred yers old in{coc.isoformat('%Y')}")
+
+#9.2
+dat=datetime.datetime.now()
+year=dat.strftime('%y')
+month=dat.strftime('%m')
+day=dat.strftime('%d')
+print(f"europ:{day}/{month}/{year}\namerican:{month}/{day}/{year}")
+
+#9.3
+birthday=input("Enter your birthday as this format-Jan 1 2014: ")
+birthday.split()
+month = birthday[0]
+day = birthday[1]
+year = birthday[2]
+new_date=datetime.date(year,month,day)
+print(new_date.strftime("%Y-%m-%d"))
+new_date=new_date-datetime.date(day=-5)
+print(new_date.strftime("%Y-%m-%d"))
+
+#9.4
+
 
 # 10.1
 def the_biggest_num(num1, num2, num3):  # Method

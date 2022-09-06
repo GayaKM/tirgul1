@@ -75,5 +75,5 @@ print(f"\n")
 
 #12
 variant = input("Enter a new string: ")
-variant = set(variant)
-variant = list(variant)
+variant1 = set(variant)
+variant2 = list(variant)
